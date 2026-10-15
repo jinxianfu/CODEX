@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64"><Configuration>Debug</Configuration><Platform>x64</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64"><Configuration>Release</Configuration><Platform>x64</Platform></ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A20BC9CB-97B1-4371-AFA8-DE55E6535785}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>EmployeeManagement</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries Condition="'$(Configuration)'=='Debug'">true</UseDebugLibraries>
+    <UseDebugLibraries Condition="'$(Configuration)'=='Release'">false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="project-settings.props" />
+  <PropertyGroup><TargetName>EmployeeManagement</TargetName></PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="database.cpp" /><ClCompile Include="workermanager.cpp" />
+    <ClCompile Include="employee.cpp" /><ClCompile Include="manager.cpp" /><ClCompile Include="boss.cpp" />
+    <ClCompile Include="职工管理系统.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="database.h" /><ClInclude Include="console_input.h" /><ClInclude Include="workermanager.h" />
+    <ClInclude Include="worker.h" /><ClInclude Include="employee.h" /><ClInclude Include="manager.h" /><ClInclude Include="boss.h" />
+  </ItemGroup>
+  <ItemGroup><None Include="database.ini" /><None Include="sql\setup.sql" /><None Include="README.md" /></ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="CopyRuntimeFiles" AfterTargets="Build">
+    <ItemGroup><RuntimeDll Include="$(ProjectDir)third_party\mysql\bin\*.dll" /></ItemGroup>
+    <Copy SourceFiles="@(RuntimeDll)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(ProjectDir)database.ini" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

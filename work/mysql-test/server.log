@@ -1,0 +1,9 @@
+2026-10-12T12:27:25.214484Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.32) starting as process 29632
+2026-10-12T12:27:25.224170Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2026-10-12T12:27:25.455854Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2026-10-12T12:27:25.627492Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2026-10-12T12:27:25.628099Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2026-10-12T12:27:25.651549Z 0 [System] [MY-010931] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: ready for connections. Version: '8.0.32'  socket: ''  port: 33307  MySQL Community Server - GPL.
+2026-10-12T12:42:24.711120Z 165 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.0.32).
+2026-10-12T12:42:24.711761Z 0 [System] [MY-013105] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Normal shutdown.
+2026-10-12T12:42:25.137768Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.32)  MySQL Community Server - GPL.
